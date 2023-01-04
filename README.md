@@ -1,4 +1,5 @@
 # Running The Application
+Configure your local Docker containers to run on Linux.
 Open terminal in the project root directory and type
 > docker-compose up --build
 
