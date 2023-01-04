@@ -10,10 +10,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["Source/Contexts/AdventureManager/Web/Adventuring.Contexts.AdventureManager.Web.API/Adventuring.Contexts.AdventureManager.Web.API.csproj", "Source/Contexts/AdventureManager/Web/Adventuring.Contexts.AdventureManager.Web.API/"]
-RUN dotnet restore "Source/Contexts/AdventureManager/Web/Adventuring.Contexts.AdventureManager.Web.API/Adventuring.Contexts.AdventureManager.Web.API.csproj"
+COPY ["Source/Contexts/AdventureManager/Web/API/Adventuring.Contexts.AdventureManager.Web.API.csproj", "Source/Contexts/AdventureManager/Web/API/"]
+RUN dotnet restore "Source/Contexts/AdventureManager/Web/API/Adventuring.Contexts.AdventureManager.Web.API.csproj"
 COPY . .
-WORKDIR "/src/Source/Contexts/AdventureManager/Web/Adventuring.Contexts.AdventureManager.Web.API"
+WORKDIR "/src/Source/Contexts/AdventureManager/Web/API"
 RUN dotnet build "Adventuring.Contexts.AdventureManager.Web.API.csproj" -c Release -o /app/build
 
 FROM build AS publish

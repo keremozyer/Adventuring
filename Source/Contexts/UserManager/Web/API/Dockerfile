@@ -11,10 +11,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["Source/Contexts/UserManager/Adventuring.Contexts.UserManager.Web.API/Adventuring.Contexts.UserManager.Web.API.csproj", "Source/Contexts/UserManager/Adventuring.Contexts.UserManager.Web.API/"]
-RUN dotnet restore "Source/Contexts/UserManager/Adventuring.Contexts.UserManager.Web.API/Adventuring.Contexts.UserManager.Web.API.csproj"
+COPY ["Source/Contexts/UserManager/Web/API/Adventuring.Contexts.UserManager.Web.API.csproj", "Source/Contexts/UserManager/Web/API/"]
+RUN dotnet restore "Source/Contexts/UserManager/Web/API/Adventuring.Contexts.UserManager.Web.API.csproj"
 COPY . .
-WORKDIR "/src/Source/Contexts/UserManager/Adventuring.Contexts.UserManager.Web.API"
+WORKDIR "/src/Source/Contexts/UserManager/Web/API"
 RUN dotnet build "Adventuring.Contexts.UserManager.Web.API.csproj" -c Release -o /app/build
 
 FROM build AS publish

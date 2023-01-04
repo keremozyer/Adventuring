@@ -10,10 +10,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["Source/Gateways/Adventuring.Gateways.Web/Adventuring.Gateways.Web.csproj", "Source/Gateways/Adventuring.Gateways.Web/"]
-RUN dotnet restore "Source/Gateways/Adventuring.Gateways.Web/Adventuring.Gateways.Web.csproj"
+COPY ["Source/Gateways/Web/Adventuring.Gateways.Web.csproj", "Source/Gateways/Web/"]
+RUN dotnet restore "Source/Gateways/Web/Adventuring.Gateways.Web.csproj"
 COPY . .
-WORKDIR "/src/Source/Gateways/Adventuring.Gateways.Web"
+WORKDIR "/src/Source/Gateways/Web"
 RUN dotnet build "Adventuring.Gateways.Web.csproj" -c Release -o /app/build
 
 FROM build AS publish
