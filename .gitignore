@@ -401,3 +401,5 @@ mongoData/
 /mongoData
 postgresData/
 /posgresData
+pgAdminData/
+/pgAdminData

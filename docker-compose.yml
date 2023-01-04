@@ -37,7 +37,7 @@ services:
     container_name: pgadmin
     image: dpage/pgadmin4
     volumes:
-      - ./posgresData/pgadmin:/var/lib/pgadmin
+      - ./pgAdminData:/var/lib/pgadmin
     ports:
       - "5050:80"
     restart: unless-stopped
