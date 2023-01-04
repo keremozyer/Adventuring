@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\Architecture\Data\Context\Implementation\EntityFramework\Adventuring.Architecture.Data.Context.Implementation.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Architecture\Data\Repository\Implementation\EntityFramework\Adventuring.Architecture.Data.Repository.Implementation.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\..\..\Model\Entity\Adventuring.Contexts.AdventureManager.Model.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

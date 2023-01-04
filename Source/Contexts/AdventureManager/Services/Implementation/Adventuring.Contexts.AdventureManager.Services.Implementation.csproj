@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Architecture\Container\ActiveUser\Interface\Adventuring.Architecture.Container.ActiveUser.Interface.csproj" />
+    <ProjectReference Include="..\..\Concern\Option\Adventuring.Contexts.AdventureManager.Concern.Option.csproj" />
+    <ProjectReference Include="..\..\Data\Interface\Adventuring.Contexts.AdventureManager.Data.Interface.csproj" />
+    <ProjectReference Include="..\..\Mapper\Interface\Adventuring.Contexts.AdventureManager.Mapper.Interface.csproj" />
+    <ProjectReference Include="..\Interface\Adventuring.Contexts.AdventureManager.Services.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

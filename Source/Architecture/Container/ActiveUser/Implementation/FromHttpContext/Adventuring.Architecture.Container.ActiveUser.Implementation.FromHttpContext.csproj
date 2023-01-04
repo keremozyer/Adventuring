@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Concern\Constant\Adventuring.Architecture.Concern.Constant.csproj" />
+    <ProjectReference Include="..\..\..\..\Concern\Extension\Adventuring.Architecture.Concern.Extension.csproj" />
+    <ProjectReference Include="..\..\Interface\Adventuring.Architecture.Container.ActiveUser.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

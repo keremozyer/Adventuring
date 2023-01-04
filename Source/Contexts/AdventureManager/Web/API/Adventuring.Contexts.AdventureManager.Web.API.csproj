@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>6abe742a-bd6a-4271-8717-887f34bd7dce</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..\..</DockerfileContext>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\..\..\Shared\Configuration\MessageTemplates.json" Link="Configurations\MessageTemplates.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\..\Shared\Configuration\TokenSettings.Development.json" Link="Configurations\TokenSettings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\..\Shared\Configuration\TokenSettings.json" Link="Configurations\TokenSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Architecture\Application\Web\Core\Adventuring.Architecture.Application.Web.Core.csproj" />
+    <ProjectReference Include="..\..\Concern\Option\Adventuring.Contexts.AdventureManager.Concern.Option.csproj" />
+    <ProjectReference Include="..\..\Data\Implementation\Adventuring.Contexts.AdventureManager.Data.Implementation.csproj" />
+    <ProjectReference Include="..\..\Data\Interface\Adventuring.Contexts.AdventureManager.Data.Interface.csproj" />
+    <ProjectReference Include="..\..\Data\Repository\Database\Mongo\Adventuring.Contexts.AdventureManager.Data.Repository.Database.Mongo.csproj" />
+    <ProjectReference Include="..\..\Mapper\Implementation\Adventuring.Contexts.AdventureManager.Mapper.Implementation.csproj" />
+    <ProjectReference Include="..\..\Mapper\Interface\Adventuring.Contexts.AdventureManager.Mapper.Interface.csproj" />
+    <ProjectReference Include="..\..\Model\Contract\Adventuring.Contexts.AdventureManager.Model.Contract.csproj" />
+    <ProjectReference Include="..\..\Services\Implementation\Adventuring.Contexts.AdventureManager.Services.Implementation.csproj" />
+    <ProjectReference Include="..\..\Services\Interface\Adventuring.Contexts.AdventureManager.Services.Interface.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include ="..\Test\Integration\Adventuring.Contexts.AdventureManager.Test.Integration.csproj"/>
+	</ItemGroup>
+
+</Project>

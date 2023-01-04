@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Concern\Constant\Adventuring.Architecture.Concern.Constant.csproj" />
+    <ProjectReference Include="..\..\..\..\Concern\Extension\Adventuring.Architecture.Concern.Extension.csproj" />
+    <ProjectReference Include="..\..\..\Model\Adventuring.Architecture.AppException.Model.csproj" />
+    <ProjectReference Include="..\..\Interface\Adventuring.Architecture.AppException.Manager.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

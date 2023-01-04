@@ -1,0 +1,12 @@
+{
+  "OpenAPISettings": {
+    "Title": "UserManager.Web.API",
+    "HasSecurity": true,
+    "EndpointSettings": [
+      {
+        "Endpoint": "/swagger/v1/swagger.json",
+        "APIName": "UserManager.Web.API"
+      }
+    ]
+  }
+}

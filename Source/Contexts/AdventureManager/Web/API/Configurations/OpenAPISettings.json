@@ -1,0 +1,12 @@
+{
+  "OpenAPISettings": {
+    "Title": "AdventureManager.Web.API",
+    "HasSecurity": true,
+    "EndpointSettings": [
+      {
+        "Endpoint": "/swagger/v1/swagger.json",
+        "APIName": "AdventureManager.Web.API"
+      }
+    ]
+  }
+}

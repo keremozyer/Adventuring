@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\Contract\Adventuring.Contexts.UserManager.Model.Contract.csproj" />
+    <ProjectReference Include="..\..\Model\DataTransferObject\Adventuring.Contexts.UserManager.Model.DataTransferObject.csproj" />
+    <ProjectReference Include="..\..\Model\Domain\Adventuring.Contexts.UserManager.Model.Domain.csproj" />
+    <ProjectReference Include="..\..\Model\Entity\Adventuring.Contexts.UserManager.Model.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

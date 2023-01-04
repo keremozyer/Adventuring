@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Container\ActiveUser\Interface\Adventuring.Architecture.Container.ActiveUser.Interface.csproj" />
+    <ProjectReference Include="..\..\..\..\Model\Entity\Implementation\Record\Adventuring.Architecture.Model.Entity.Implementation.Record.csproj" />
+    <ProjectReference Include="..\..\..\Context\Implementation\EntityFramework\Adventuring.Architecture.Data.Context.Implementation.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\Interface\Adventuring.Architecture.Data.Repository.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

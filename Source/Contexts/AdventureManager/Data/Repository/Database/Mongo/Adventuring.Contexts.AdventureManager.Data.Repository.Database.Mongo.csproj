@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\Architecture\Data\Context\Implementation\Mongo\Adventuring.Architecture.Data.Context.Implementation.Mongo.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Architecture\Data\Context\Interface\Adventuring.Architecture.Data.Context.Interface.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Architecture\Data\Repository\Implementation\Mongo\Adventuring.Architecture.Data.Repository.Implementation.Mongo.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Architecture\Data\Repository\Interface\Adventuring.Architecture.Data.Repository.Interface.csproj" />
+    <ProjectReference Include="..\..\..\..\Concern\Option\Adventuring.Contexts.AdventureManager.Concern.Option.csproj" />
+    <ProjectReference Include="..\..\..\..\Model\Entity\Adventuring.Contexts.AdventureManager.Model.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

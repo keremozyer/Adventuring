@@ -1,0 +1,7 @@
+{
+  "MongoSettings": {
+    "ConnectionString": "mongodb://mongo_host",
+    "DatabaseName": "AdventureManager",
+    "DoesSupportTransactions": false
+  }
+}

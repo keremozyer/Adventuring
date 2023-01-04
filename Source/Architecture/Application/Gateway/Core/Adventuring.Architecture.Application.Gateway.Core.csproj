@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MMLib.Ocelot.Provider.AppConfiguration" Version="2.0.0" />
+    <PackageReference Include="MMLib.SwaggerForOcelot" Version="6.1.0" />
+    <PackageReference Include="Ocelot" Version="18.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Web\Core\Adventuring.Architecture.Application.Web.Core.csproj" />
+    <ProjectReference Include="..\Concern\Option\Adventuring.Architecture.Application.Gateway.Concern.Option.csproj" />
+  </ItemGroup>
+
+</Project>

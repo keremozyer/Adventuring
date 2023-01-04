@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Adventure\IAdventureMapper.cs~RF15deb142.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\Contract\Adventuring.Contexts.AdventureManager.Model.Contract.csproj" />
+    <ProjectReference Include="..\..\Model\DataTransferObject\Adventuring.Contexts.AdventureManager.Model.DataTransferObject.csproj" />
+    <ProjectReference Include="..\..\Model\Domain\Adventuring.Contexts.AdventureManager.Model.Domain.csproj" />
+    <ProjectReference Include="..\..\Model\Entity\Adventuring.Contexts.AdventureManager.Model.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

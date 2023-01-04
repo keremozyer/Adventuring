@@ -1,0 +1,149 @@
+{
+  "Routes": [
+    // UserManager API
+    {
+      "UpstreamPathTemplate": "/UserManager/UserRole",
+      "UpstreamHttpMethod": [ "POST", "DELETE" ],
+      "DownstreamPathTemplate": "/api/AppUserRole",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "adventuring.contexts.usermanager.web.api",
+          "Port": "80"
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin"
+      },
+      "SwaggerKey": "UserManager"
+    },
+    {
+      "UpstreamPathTemplate": "/UserManager/{everything}",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "adventuring.contexts.usermanager.web.api",
+          "Port": "80"
+        }
+      ],
+      "SwaggerKey": "UserManager"
+    },
+    // AdventureManager API
+    {
+      "UpstreamPathTemplate": "/AdventureManager/Adventure",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Adventure",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "adventuring.contexts.adventuremanager.web.api",
+          "Port": "80"
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Designer"
+      },
+      "SwaggerKey": "AdventureManager"
+    },
+    {
+      "UpstreamPathTemplate": "/AdventureManager/Adventure",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Adventure",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "adventuring.contexts.adventuremanager.web.api",
+          "Port": "80"
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "AdventureManager"
+    },
+    {
+      "UpstreamPathTemplate": "/AdventureManager/Adventure/{ID}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Adventure/{ID}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "adventuring.contexts.adventuremanager.web.api",
+          "Port": "80"
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "AdventureManager"
+    },
+    {
+      "UpstreamPathTemplate": "/AdventureManager/Game",
+      "UpstreamHttpMethod": [ "GET", "POST", "PATCH" ],
+      "DownstreamPathTemplate": "/api/Game",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "adventuring.contexts.adventuremanager.web.api",
+          "Port": "80"
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "AdventureManager"
+    },
+    {
+      "UpstreamPathTemplate": "/AdventureManager/Game/{ID}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Game/{ID}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "adventuring.contexts.adventuremanager.web.api",
+          "Port": "80"
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "AdventureManager"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "UserManager",
+      "Config": [
+        {
+          "Name": "UserManager API",
+          "Version": "v1",
+          "Url": "http://adventuring.contexts.usermanager.web.api/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "AdventureManager",
+      "Config": [
+        {
+          "Name": "AdventureManager API",
+          "Version": "v1",
+          "Url": "http://adventuring.contexts.adventuremanager.web.api/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}

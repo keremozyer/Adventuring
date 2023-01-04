@@ -1,0 +1,16 @@
+{
+  "HealthCheckSettings": {
+    "HealthChecks": [
+      {
+        "URL": "http://adventuring.contexts.usermanager.web.api/health",
+        "Retries": 10,
+        "IntervalInMilliseconds": 3000
+      },
+      {
+        "URL": "http://adventuring.contexts.adventuremanager.web.api/health",
+        "Retries": 10,
+        "IntervalInMilliseconds": 3000
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "MessageTemplates": {
+    "UnexpectedError": "An unexpected error happened.",
+    "NodeMustBeBalanced": "Node with message '{0}' is unbalanced, missing {1}.",
+    "DataNotFound": "{0} record with {1} is not found.",
+    "InvalidPassword": "Invalid password.",
+    "ConfigurationValueCannotBeEmpty": "{0} configuration value cannot be empty.",
+    "InvalidConfigurationValue": "{1} configuration value is invalid.",
+    "UsernameAlreadyTaken": "Username already taken.",
+    "RoleAlreadyExists": "Role already exists.",
+    "RoleCannotBeGranted": "Role cannot be granted.",
+    "UnauthorizedOperation": "User is unauthorized to perform operation {0}.",
+    "DefaultRoleCannotBeRemoved": "Default role cannot be removed.",
+    "GameIsAlreadyOver": "Game is already over.",
+    "FieldCannotBeEmpty": "Field {0} cannot be empty.",
+    "AdventureAlreadyExists": "An adventure with this name already exists."
+  }
+}

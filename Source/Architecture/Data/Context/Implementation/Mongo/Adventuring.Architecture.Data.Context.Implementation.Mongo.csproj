@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.18.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Contexts\AdventureManager\Concern\Option\Adventuring.Contexts.AdventureManager.Concern.Option.csproj" />
+    <ProjectReference Include="..\..\..\..\Model\Entity\Implementation\Document\Adventuring.Architecture.Model.Entity.Implementation.Document.csproj" />
+    <ProjectReference Include="..\..\Interface\Adventuring.Architecture.Data.Context.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

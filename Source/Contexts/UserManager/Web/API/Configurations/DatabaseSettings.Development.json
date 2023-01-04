@@ -1,0 +1,9 @@
+{
+  "ConnectionStrings": {
+    "UserManagerDataContext": "Host=postgres_host;Database=UserManagerDataContext;Username=admin;Password=pass"
+  },
+  "DatabaseConnectionRetrySettings": {
+    "Retries": 5,
+    "IntervalInMilliseconds": 5000
+  }
+}

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Architecture\Model\Interface\Adventuring.Architecture.Model.Interface.csproj" />
+    <ProjectReference Include="..\..\Model\DataTransferObject\Adventuring.Contexts.AdventureManager.Model.DataTransferObject.csproj" />
+  </ItemGroup>
+
+</Project>

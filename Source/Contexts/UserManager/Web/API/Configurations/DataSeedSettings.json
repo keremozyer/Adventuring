@@ -1,0 +1,30 @@
+{
+  "DataSeedSettings": {
+    "Users": [
+      {
+        "username": "AdminUser",
+        "password": "Pass",
+        "roles": [
+          "Admin",
+          "Designer",
+          "Player"
+        ]
+      },
+      {
+        "username": "DesignerUser",
+        "password": "Pass",
+        "roles": [
+          "Designer",
+          "Player"
+        ]
+      },
+      {
+        "username": "PlayerUser",
+        "password": "Pass",
+        "roles": [
+          "Player"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Architecture\Concern\Extension\Adventuring.Architecture.Concern.Extension.csproj" />
+    <ProjectReference Include="..\..\..\..\Architecture\Model\Interface\Adventuring.Architecture.Model.Interface.csproj" />
+    <ProjectReference Include="..\..\Concern\Helper\Adventuring.Contexts.UserManager.Concern.Helper.csproj" />
+  </ItemGroup>
+
+</Project>

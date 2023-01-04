@@ -1,0 +1,56 @@
+version: '3.4'
+
+services:
+  adventuring.gateways.web:
+    container_name: adventuring.gateways.web
+    image: ${DOCKER_REGISTRY-}adventuringgatewaysweb
+    build:
+      context: .
+      dockerfile: Source/Gateways/Web/Dockerfile
+    ports:
+      - "8010:443"
+  adventuring.contexts.usermanager.web.api:
+    container_name: adventuring.contexts.usermanager.web.api
+    image: ${DOCKER_REGISTRY-}adventuringcontextsusermanager
+    build:
+      context: .
+      dockerfile: Source/Contexts/UserManager/Web/API/Dockerfile
+    depends_on:
+      - postgres_host
+  adventuring.contexts.adventuremanager.web.api:
+    container_name: adventuring.contexts.adventuremanager.web.api
+    image: ${DOCKER_REGISTRY-}adventuringcontextsadventuremanager
+    build:
+      context: .
+      dockerfile: Source/Contexts/AdventureManager/Web/API/Dockerfile
+    depends_on:
+      - mongo_host
+  postgres_host:
+    container_name: postgres_host
+    image: postgres
+    environment:
+      PGDATA: /data/postgres
+    volumes:
+      - ./posgresData:/data/postgres
+    restart: unless-stopped
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    volumes:
+      - ./posgresData/pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    restart: unless-stopped
+    depends_on:
+      - postgres_host
+  mongo_host:
+    container_name: mongo_host
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongoData:/data/db
+
+volumes:
+    postgres:
+    pgadmin:
