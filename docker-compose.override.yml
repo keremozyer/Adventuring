@@ -4,7 +4,7 @@ services:
   adventuring.gateways.web:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_URLS=http://+:80
     ports:
       - "8000:80"
       - "8010:443"
@@ -14,7 +14,7 @@ services:
   adventuring.contexts.usermanager.web.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_URLS=http://+:80
     ports:
       - "8001:80"
       - "8011:443"
@@ -24,7 +24,7 @@ services:
   adventuring.contexts.adventuremanager.web.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_URLS=http://+:80
     ports:
       - "8002:80"
       - "8012:443"
